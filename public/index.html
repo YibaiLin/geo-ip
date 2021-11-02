@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ip-info</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+<div class="wrap" id="wrap">
+
+    <!--IP地址或域名输入栏-->
+    <div class="input-box">
+        <p>Hit Enter to Submit</p>
+        <input class="ip-input" id="ipInput" type="text" value="">
+        <h1>Input your ip</h1>
+    </div>
+
+    <!--freegeoip.net 返回的相关IP地址的信息-->
+    <div id="info" class="info"></div>
+
+</div>
+
+<!--点击经纬度后调用的地图-->
+<div id="container" class="container"></div>
+
+<script src="./index.js"></script>
+</body>
+</html>
