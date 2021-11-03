@@ -1,0 +1,21 @@
+name: GitHub Actions Demo
+on: 
+  push:
+    branches:
+    - 'master'
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Publish current workdir (which contains generated content) to Github Pages
+      - uses: rayluo/github-pages-overwriter@v1.2
+
+        with:
+          # directory which has the static files for github pages
+          source-directory: public
+
+          # It specifies the temporary branch which hosts the static website.
+          # Each build will OVERWRITE this branch.
+          target-branch: gh_pages
